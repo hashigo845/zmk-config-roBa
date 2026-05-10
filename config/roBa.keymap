@@ -78,6 +78,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        enc_m_scroll: enc_m_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_M_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
 
     keymap {
@@ -91,7 +98,7 @@
 &hold_tap_kp_kp LCTRL TAB  &kp LEFT_ALT  &kp LEFT_WIN  &lt 3 LS(CAPS)  &mo 1  &kt LEFT_SHIFT      &lt 2 SPACE  &kp BACKSPACE                             &kp ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&enc_m_scroll>;
         };
 
         mouse {
@@ -102,7 +109,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp DELETE                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&enc_m_scroll>;
         };
 
         NUM {
@@ -113,7 +120,7 @@
 &trans        &kp N0        &kp PERIOD    &trans        &trans          &trans      &trans  &kp DELETE                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&enc_m_scroll>;
         };
 
         symbol {
@@ -124,7 +131,7 @@
 &trans     &trans           &trans       &trans    &trans      &trans      &trans         &kp DELETE                                                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&enc_m_scroll>;
         };
     };
 };
