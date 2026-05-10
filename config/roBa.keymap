@@ -39,8 +39,13 @@
 
         bt_next {
             bindings = <&bt BT_NXT>;
-            key-positions = <8 9>;
+            key-positions = <3 4>;
             layers = <1>;
+        };
+
+        bt_prev {
+            bindings = <&bt BT_PRV>;
+            key-positions = <0 1>;
         };
     };
 
@@ -107,10 +112,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans      &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp DELETE                                &trans
+&bt BT_PRV     &trans         &bt BT_CLR     &trans         &bt BT_NXT                         &trans      &trans    &trans    &trans    &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans      &trans  &trans      &mkp MB4  &trans    &mkp MB5  &trans
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans      &trans  &trans      &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans         &trans         &trans         &trans         &trans         &trans      &trans  &kp DELETE                                &trans
             >;
 
             sensor-bindings = <&enc_m_scroll>;
