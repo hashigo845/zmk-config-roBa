@@ -43,15 +43,9 @@
             layers = <0>;
         };
 
-        quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <20 21>;
-            layers = <0 3>;
-        };
-
         backslash {
             bindings = <&kp BSLH>;
-            key-positions = <32 33>;
+            key-positions = <20 21>;
             layers = <0 3>;
         };
     };
