@@ -42,6 +42,12 @@
             key-positions = <0 1>;
             layers = <0>;
         };
+
+        quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <20 21>;
+            layers = <0 3>;
+        };
     };
 
     macros {
@@ -64,14 +70,6 @@
             flavor = "tap-preferred";
         };
 
-        sticky_key: sticky_key {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
-
         enc_m_scroll: enc_m_scroll {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_M_SCROLL";
@@ -79,15 +77,6 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
-        };
-
-        hold_tap_kp_kt: hold_tap_kp_kt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KP_KT";
-            bindings = <&kp>, <&kt>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
     };
 
