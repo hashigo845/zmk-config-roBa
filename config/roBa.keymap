@@ -48,6 +48,12 @@
             key-positions = <20 21>;
             layers = <0 3>;
         };
+
+        backslash {
+            bindings = <&kp BSLH>;
+            key-positions = <32 33>;
+            layers = <0 3>;
+        };
     };
 
     macros {
